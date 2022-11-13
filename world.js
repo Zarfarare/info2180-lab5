@@ -4,7 +4,8 @@ window.onload = function(){
     let result = document.querySelector("#result");
     
     
-    LookUpbtn.onclick = function(){
+    LookUpbtn.onclick = (event)=>{
+        event.preventDefault();
         let country = document.querySelector("#country").value;
         
         fetch(`http://localhost/info2180-lab5/world.php?country=${country.trim()}`)
@@ -20,7 +21,8 @@ window.onload = function(){
     }
 
 
-    Citylookup.onclick = function(){
+    Citylookup.onclick = (event)=>{
+        event.preventDefault();
         let country = document.querySelector("#country").value;
 
         fetch(`http://localhost/info2180-lab5/world.php?country=${country.trim()}&lookup=cities`)
